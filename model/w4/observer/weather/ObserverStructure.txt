@@ -1,0 +1,23 @@
+@startuml
+participant Client
+participant ISubject
+participant Subject
+participant IObserver
+participant Observer
+
+autonumber
+Client -> IObserver:obs=new()
+Client -> ISubject:registerObservers(obs)
+Client -> ISubject:setChanged()
+ISubject -> ISubject:notifyObservers()
+ISubject -> IObserver:update()
+Observer -> Subject:getData()
+
+note right
+    Intefaces do not appear on the sequence diagram.
+    For an eudcation purpose, they are shown.
+    getData() may not be called
+    in case parameters are passed onto update().
+end note
+
+@enduml

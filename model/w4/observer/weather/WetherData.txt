@@ -1,0 +1,18 @@
+@startuml
+class WeatherData {
+    getTemperature()
+    getHumidity()
+    getPressure()
+    measurementsChanged()
+}
+note right
+   <&wifi>
+   "private void measurementsChanged() {
+        float humidity=getHumidity();
+        float pressure=getPressure();
+        broadcastingCompany.update(temp,humidity,pressure);
+        agricultureAgency.update(temp,humidity,pressure);
+        sportsDisplay.update(temp,humidity,pressure);
+   }"
+end note
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+
+box "weather providers" #LightBlue
+  participant sensorDevice
+  participant weatherStation
+end box
+
+autonumber
+sensorDevice <- weatherStation: poll sensor data
+weatherStation <- weatherDataObject: poll data
+... later ...
+weatherStation <- weatherDataObject: poll data
+
+... later ...
+autonumber 100
+note right #aqua
+  keep asking if there is **any change** in weather station\n
+end note
+weatherDataObject -> DisplayDevice: displays
+
+@enduml

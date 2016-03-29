@@ -1,0 +1,17 @@
+@startuml
+participant WeatherStation
+participant ISubject
+participant WeatherData
+participant IObserver
+participant CurrentDisplay
+
+autonumber
+WeatherStation -> WeatherData:weatherData=new()
+WeatherStation -> CurrentDisplay:currentDisplay=new(weatherData)
+WeatherStation -> WeatherData:registerObserver(currentDisplay)
+WeatherStation -> WeatherData:setMeasurements()
+WeatherData -> WeatherData:measurementsChanged()
+WeatherData -> WeatherData:notifyObservers()
+WeatherData -> CurrentDisplay:update()
+CurrentDisplay -> WeatherData:getData()
+@enduml
