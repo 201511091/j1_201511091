@@ -19,6 +19,12 @@ class TurtleMouseListener extends Turtle {
         forward(d);
         setStatusText("Moving to " + p.toString());
       }
+      public void mouseReleased(MouseEvent e) {
+        Point2D.Double p2;
+        //p2 = (Point2D.DOuble)e.getPoint();
+        p2 = toTurtlePos(e.getPoint());
+        setStatusText("Mouse relesed at " + p2.toString());
+      }	
     });
     addMouseMotionListener(new MouseMotionAdapter() {
       public void mouseDragged(MouseEvent e) {
