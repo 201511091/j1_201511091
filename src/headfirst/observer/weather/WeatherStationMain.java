@@ -2,7 +2,7 @@ package headfirst.observer.weather;
 
 import java.util.*;
 
-public class WeatherStation {
+public class WeatherStationMain {
 
 	public static void main(String[] args) {
 		WeatherData weatherData = new WeatherData();
