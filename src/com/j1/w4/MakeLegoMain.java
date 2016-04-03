@@ -1,3 +1,8 @@
+/*
+ * title: Eunho's version of legoDecorator.
+ * author: Eunho Kim & Sangik Cho
+ * description: Initial code was established by both two authors. Later developed seperatley in diffrent versions. 
+ */
 package com.j1.w4;
 
 public class MakeLegoMain {
