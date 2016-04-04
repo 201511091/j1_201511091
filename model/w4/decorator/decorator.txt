@@ -1,0 +1,15 @@
+class Component {
+    getDescription()
+    cost()
+}
+class Decorator {
+    c:Component
+    abstarct getDescription()
+}
+
+Component <|-- concreteComponent0
+Component <|-- concreteComponent1
+Component <|-- Decorator
+Component <--* Decorator
+Decorator <|-- ConcreteDecorator
+
