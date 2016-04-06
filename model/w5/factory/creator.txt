@@ -1,0 +1,9 @@
+class Creator {
+    factoryMethod()
+}
+class Product
+class ConcreteProduct
+
+ConcreteCreator -> ConcreteProduct
+Creator <|-- ConcreteCreator
+Product <|-- ConcreteProduct

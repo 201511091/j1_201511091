@@ -1,0 +1,17 @@
+class PizzaStore {
+    orderPizza()
+}
+class SimplePizzaFactory {
+    createPizza(type:String):CheesePizza
+}
+class Pizza {
+    prepare()
+    bake()
+    cut()
+    box()
+}
+Pizza <|-- CheesePizza
+Pizza <|-- VeggiPizza
+Pizza <|-- ClamPizza
+SimplePizzaFactory -> Pizza
+PizzaStore -> SimplePizzaFactory

@@ -1,0 +1,9 @@
+
+Client -> SimplePizzaFactory:factory=new()
+Client -> PizzaStore:new(factory)
+Client -> PizzaStore:orderPizza("cheesePizza")
+PizzaStore -> "factory:SimplePizzaFactory":pizza=cheesePizza
+PizzaStore -> Pizza:prepare()
+PizzaStore -> Pizza:bake()
+PizzaStore -> Pizza:cut()
+PizzaStore -> Pizza:box()
