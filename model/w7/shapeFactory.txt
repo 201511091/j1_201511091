@@ -1,0 +1,20 @@
+abstract class DrawingAbstractFactory {
+    abstract getColor(String):Color
+    abstract getShape(String):Color
+}
+
+DrawingAbstractFactory <-- ColorFactory
+DrawingAbstractFactory <-- ShapeFactory
+
+interface Color
+
+Color <|.. Green
+Color <|.. Red
+
+interface Shape
+
+Shape <|.. Rectangle
+Shape <|.. Square
+
+ColorFactory ..> Color
+ShapeFactory ..> Shape
