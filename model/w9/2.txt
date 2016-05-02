@@ -1,0 +1,12 @@
+class Client
+class Receiver
+class Invoker {
+    setCommand()
+}
+Interface Command {
+    execute()
+}
+Command <|-- ConcreteCommand
+Client -> ConcreteCommand:new()
+Client -> Invoker:setCommand()
+ConcreteCommand -> Receiver

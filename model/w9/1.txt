@@ -1,0 +1,6 @@
+class Client
+class Light
+class Garage
+class TV
+Client -> Light:on()
+Client -> Garage:open()
