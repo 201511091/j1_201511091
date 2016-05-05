@@ -1,0 +1,27 @@
+Interface Command {
+    +execute():void
+    +undo():void
+}
+class LightOnCommand {
+    -light:Light
+    +undo():void
+}
+class Light {
+    +level:int
+    +on():void
+    +dim(int):void
+}
+Command <|.. LightOnCommand 
+LightOnCommand ->Light
+
+class RemoteControlWithUndo {
+    onCommands:Command[]
+    offCommands:Command[]
+    +setCommand(int, Command, Command):void
+    +onButtonPressed(int):void
+}
+
+RemoteControlWithUndo -> Command
+class NoCommand
+Command <|.. NoCommand
+
