@@ -1,0 +1,13 @@
+interface Duck {
+    +quack():void
+    +fly():void
+}
+interface Turkey {
+    +gobble():void
+    +fly():void
+}
+
+Duck <|.. MallardDuck
+Turkey <|.. WildTurkey
+Client -up-> MallardDuck:quack()
+Client -up-> WildTurkey:gobble()

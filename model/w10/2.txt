@@ -1,0 +1,8 @@
+class Adaptee
+
+class Adapter
+interface Target
+
+Target <|.. Adapter
+Adapter -> Adaptee
+Client -> Target
