@@ -1,0 +1,12 @@
+interface Enumeration {
+    +hasMoreElements():Boolean
+    +nextElement():E
+}
+
+interface Iterator {
+    +hasNext():boolean
+    +next():E
+}
+
+IteratorAdapter .up.|> Enumeration
+IteratorAdapter -> Iterator
