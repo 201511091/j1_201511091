@@ -4,10 +4,8 @@ import java.util.*;
 
 public class IteratorEnumerationTestDrive {
   public static void main (String[] args) {
-    ArrayList l = new ArrayList();
-    for (int i = 0; i < 10; i++) {
-      l.add(i);
-    }
+    String[] str = {"one", "two", "three"};
+    ArrayList<String> l = new ArrayList<String>(Arrays.asList(str));
     Enumeration enumeration = new IteratorEnumeration(l.iterator());
     while (enumeration.hasMoreElements()) {
       System.out.println(enumeration.nextElement());
