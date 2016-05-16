@@ -1,0 +1,23 @@
+abstract class AbsractClass {
+    +templateMEthod():void
+    +abstract primitiveOperation():void
+    +final concreteOperation():void
+    +hook():void
+}
+class CaffeineRecipe {
+    +final prepareRecipe():void
+    +abstract brew():void
+    +abstract addCondiments():void
+    +boilWater():void
+    +pourInCup():void
+}
+class Coffee {
+    +brew():void
+    +addCondiments():void
+}
+class Tea {
+    +brew():void
+    +addCondiments():void
+}
+CaffeineRecipe <|-- Coffee
+CaffeineRecipe <|-- Tea

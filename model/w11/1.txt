@@ -1,0 +1,19 @@
+class CaffeineBeverage {
+    prepareRecipe()
+    boilWater()
+    pourInCup()
+}
+
+
+class Coffee {
+    brewCoffeeGrinds()
+    addSugarAndMilk()
+}
+
+class Tea {
+    steepTeaBag()
+    addLemon()
+}
+
+CaffeineBeverage <|-- Coffee
+CaffeineBeverage <|-- Tea
