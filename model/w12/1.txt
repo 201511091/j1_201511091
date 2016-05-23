@@ -1,0 +1,14 @@
+class Duck {
+    -weight:float
+
+}
+
+interface java.lang.Comparator {
+    +compareTo(T):int
+    
+}
+
+java.lang.Comparator <|.. DuckComparator
+
+Arrays -right-> Duck
+Arrays -right-> DuckComparator
