@@ -1,0 +1,17 @@
+client -> GumballMachine:new(5)
+client -> GumballMachine:insertQuarter()
+alt HAS_QUARTER
+GumballMachine -> GumballMachine:you cannot insert another quarter
+else NO_QUARTER
+GumballMachine -> GumballMachine:you inserted a quarter
+else SOLD_OUT
+GumballMachine -> GumballMachine:you cannot insert a quarter. sold out!
+else SOLD
+GumballMachine -> GumballMachine:wait! a gumball was given..
+end
+client -> GumballMachine:ejectQuarter()
+...
+client -> GumballMachine:turnCrank()
+...
+client -> GumballMachine:dispense()
+...
