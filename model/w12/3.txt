@@ -1,0 +1,21 @@
+package iterator {
+interface Iterator {
+    +hasNext():boolean
+    +next():E
+    
+}
+
+Iterator <|.. DinerIterator
+Iterator <|.. PancakeHouseMnuIterator
+}
+
+package menu {
+Interface Menu {
+    +createIterator():Iterator
+}
+
+Menu <|.. DinerMenu
+Menu <|.. PancakeHouseMenu
+}
+DinerMenu -left-> DinerIterator
+PancakeHouseMenu -left-> PancakeHouseMnuIterator
